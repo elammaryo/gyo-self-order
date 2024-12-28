@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gyo/models/providers/order_provider.dart';
 import 'package:gyo/pages/starting_page.dart';
+import 'package:provider/provider.dart';
 
 class KioskAppBar extends StatefulWidget implements PreferredSizeWidget {
   @override
@@ -34,6 +36,7 @@ class _AppBarState extends State<KioskAppBar> {
           ),
           onPressed: () {
             // TODO(): clear providers
+            context.read<OrderProvider>().clearOrderItems();
             Navigator.push(
                 context,
                 MaterialPageRoute(

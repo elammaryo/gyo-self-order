@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gyo/pages/dining_setting_page.dart';
+import 'package:gyo/shared/styles.dart';
+
+import '../shared/text.dart';
 
 class StartingPage extends StatefulWidget {
   const StartingPage({super.key});
@@ -12,19 +16,24 @@ class _StartingPageState extends State<StartingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TextButton(
-              style: TextButton.styleFrom(minimumSize: Size(500, 500)),
-              onPressed: () {},
-              child: Text('Take Out')),
-          TextButton(
-              style: TextButton.styleFrom(minimumSize: Size(500, 500)),
-              onPressed: () {},
-              child: Text('Dine In')),
-        ],
-      )),
+        child: Container(
+          color: Colors.orange[300],
+          child: TextButton(
+            style: TextButton.styleFrom(shape: RoundedRectangleBorder()),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const DiningSettingPage(),
+              ));
+            },
+            child: Center(
+              child: Text(
+                AppStrings.orderHere,
+                style: poppinsFont72ptBoldBlack,
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
