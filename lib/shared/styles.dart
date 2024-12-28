@@ -22,3 +22,9 @@ TextStyle poppinsFont48ptSemiboldBlack = TextStyle(
     fontSize: 48,
     color: blackColor,
     fontWeight: semiboldFont);
+
+TextStyle poppinsFont20ptBlack = TextStyle(
+    fontFamily: poppinsFont,
+    fontSize: 20,
+    color: blackColor,
+    fontWeight: FontWeight.normal);

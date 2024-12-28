@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gyo/models/providers/order_provider.dart';
 import 'package:gyo/pages/starting_page.dart';
+import 'package:gyo/shared/assets.dart';
+import 'package:gyo/shared/styles.dart';
 import 'package:provider/provider.dart';
 
 class KioskAppBar extends StatefulWidget implements PreferredSizeWidget {
@@ -20,35 +23,43 @@ class _AppBarState extends State<KioskAppBar> {
       toolbarHeight: 70,
       leadingWidth: 180,
       leading: TextButton(
-          style: TextButton.styleFrom(shape: RoundedRectangleBorder()),
-          child: Row(
-            spacing: 10,
-            children: [
-              Icon(
-                Icons.restart_alt_rounded,
-                size: 40,
-              ),
-              Text(
-                'Start Over',
-                style: TextStyle(fontSize: 20),
-              ),
-            ],
+        style: TextButton.styleFrom(shape: RoundedRectangleBorder()),
+        child: Row(
+          spacing: 10,
+          children: [
+            Icon(
+              Icons.restart_alt_rounded,
+              size: 40,
+            ),
+            Text(
+              'Start Over',
+              style: TextStyle(fontSize: 20),
+            ),
+          ],
+        ),
+        onPressed: () {
+          context.read<OrderProvider>().clearOrderItems();
+          Navigator.popUntil(context, (route) => route.isFirst);
+        },
+      ),
+      actions: [
+        TextButton(
+          style: TextButton.styleFrom(
+            backgroundColor: Colors.orange[400],
+            fixedSize: Size.fromWidth(190),
+            shape: RoundedRectangleBorder(),
           ),
           onPressed: () {
-            // TODO(): clear providers
-            context.read<OrderProvider>().clearOrderItems();
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const StartingPage(),
-                ));
-          }),
-      actions: [
-        ElevatedButton(
-            onPressed: () {
-              Scaffold.of(context).openEndDrawer();
-            },
-            child: Icon(Icons.card_travel))
+            Scaffold.of(context).openEndDrawer();
+          },
+          child: Row(
+            spacing: 20,
+            children: [
+              Text('View Cart', style: poppinsFont20ptBlack),
+              SizedBox(width: 40, child: SvgPicture.asset(AppIcons.cartIcon)),
+            ],
+          ),
+        )
       ],
     );
   }
