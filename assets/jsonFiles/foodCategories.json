@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "name": "Burgers",
+    "image": "assets/images/burger.png",
+    "foods": [
+      {
+        "id": 1,
+        "name": "Cheese Burger",
+        "image": "assets/images/cheeseburger.png",
+        "price": 10.0
+      },
+      {
+        "id": 2,
+        "name": "Chicken Burger",
+        "image": "assets/images/chickenburger.png",
+        "price": 12.0
+      },
+      {
+        "id": 3,
+        "name": "Veggie Burger",
+        "image": "assets/images/veggieburger.png",
+        "price": 8.0
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pizza",
+    "image": "assets/images/pizza.png",
+    "foods": [
+      {
+        "id": 1,
+        "name": "Cheese Pizza",
+        "image": "assets/images/cheesepizza.png",
+        "price": 15.0
+      },
+      {
+        "id": 2,
+        "name": "Pepperoni Pizza",
+        "image": "assets/images/pepperonipizza.png",
+        "price": 17.0
+      },
+      {
+        "id": 3,
+        "name": "Veggie Pizza",
+        "image": "assets/images/veggiepizza.png",
+        "price": 13.0
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pasta",
+    "image": "assets/images/pasta.png",
+    "foods": [
+      {
+        "id": 1,
+        "name": "Spaghetti",
+        "image": "assets/images/spaghetti.png",
+        "price": 10.0
+      },
+      {
+        "id": 2,
+        "name": "Fettuccine",
+        "image": "assets/images/fettuccine.png",
+        "price": 12.0
+      },
+      {
+        "id": 3,
+        "name": "Ravioli",
+        "image": "assets/images/ravioli.png",
+        "price": 8.0
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Salad",
+    "image": "assets/images/salad.png",
+    "foods": [
+      {
+        "id": 1,
+        "name": "Caesar Salad",
+        "image": "assets/images/caesarsalad.png",
+        "price": 10.0
+      },
+      {
+        "id": 2,
+        "name": "Greek Salad",
+        "image": "assets/images/greeksalad.png",
+        "price": 12.0
+      },
+      {
+        "id": 3,
+        "name": "Garden Salad",
+        "image": "assets/images/gardensalad.png",
+        "price": 8.0
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Dessert",
+    "image": "assets/images/dessert.png",
+    "foods": [
+      {
+        "id": 1,
+        "name": "Cheesecake",
+        "image": "assets/images/cheesecake.png",
+        "price": 10.0
+      },
+      {
+        "id": 2,
+        "name": "Chocolate Cake",
+        "image": "assets/images/chocolatecake.png",
+        "price": 12.0
+      },
+      {
+        "id": 3,
+        "name": "Ice Cream",
+        "image": "assets/images/icecream.png",
+        "price": 8.0
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Drinks",
+    "image": "assets/images/drink.png",
+    "foods": [
+      {
+        "id": 1,
+        "name": "Coke",
+        "image": "assets/images/coke.png",
+        "price": 2.0
+      },
+      {
+        "id": 2,
+        "name": "Pepsi",
+        "image": "assets/images/pepsi.png",
+        "price": 2.0
+      },
+      {
+        "id": 3,
+        "name": "Sprite",
+        "image": "assets/images/sprite.png",
+        "price": 2.0
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Sides",
+    "image": "assets/images/sides.png",
+    "foods": [
+      {
+        "id": 1,
+        "name": "Fries",
+        "image": "assets/images/fries.png",
+        "price": 5.0
+      },
+      {
+        "id": 2,
+        "name": "Onion Rings",
+        "image": "assets/images/onionrings.png",
+        "price": 6.0
+      },
+      {
+        "id": 3,
+        "name": "Mozzarella Sticks",
+        "image": "assets/images/mozzarellasticks.png",
+        "price": 7.0
+      }
+    ]
+  }
+]
