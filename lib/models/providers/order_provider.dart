@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:gyo/models/OrderItem.dart';
+import '../Item.dart';
 
 class OrderProvider extends ChangeNotifier {
-  List<OrderItem> _orderItems = [];
-  List<OrderItem> get orderItems => _orderItems;
+  List<Item> _orderItems = [];
+  List<Item> get orderItems => _orderItems;
 
-  void addOrderItem(OrderItem orderItem) {
+  void addOrderItem(final Item orderItem) {
     _orderItems.add(orderItem);
     notifyListeners();
   }
 
-  void removeOrderItem(OrderItem orderItem) {
+  void removeOrderItem(final Item orderItem) {
     _orderItems.remove(orderItem);
     notifyListeners();
   }
