@@ -28,7 +28,7 @@ class _StartingPageState extends State<StartingPage> {
             child: Center(
               child: Text(
                 AppStrings.orderHere,
-                style: poppinsFont72ptBoldBlack,
+                style: poppinsFont90ptBoldBlack,
               ),
             ),
           ),

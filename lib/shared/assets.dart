@@ -12,4 +12,5 @@ class AppIcons {
   static const String takeOutIcon = 'assets/icons/take_away_icon.png';
   static const String dineInIcon = 'assets/icons/fork_knife_icon.svg';
   static const String cartIcon = 'assets/icons/cart_icon.svg';
+  static const String burgerIcon = 'assets/icons/burger_icon.png';
 }

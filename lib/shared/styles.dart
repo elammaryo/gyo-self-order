@@ -9,10 +9,11 @@ const String poppinsFont = 'Poppins';
 
 const FontWeight boldFont = FontWeight.bold;
 const FontWeight semiboldFont = FontWeight.w600;
+const FontWeight normalFont = FontWeight.normal;
 
-TextStyle poppinsFont72ptBoldBlack = TextStyle(
+TextStyle poppinsFont90ptBoldBlack = TextStyle(
     fontFamily: poppinsFont,
-    fontSize: 72,
+    fontSize: 90,
     color: blackColor,
     fontWeight: boldFont,
     letterSpacing: 5);
@@ -23,8 +24,20 @@ TextStyle poppinsFont48ptSemiboldBlack = TextStyle(
     color: blackColor,
     fontWeight: semiboldFont);
 
-TextStyle poppinsFont20ptBlack = TextStyle(
+TextStyle poppinsFont16ptBlack = TextStyle(
     fontFamily: poppinsFont,
-    fontSize: 20,
+    fontSize: 16,
     color: blackColor,
-    fontWeight: FontWeight.normal);
+    fontWeight: semiboldFont);
+
+TextStyle poppinsFont20ptSemibold = TextStyle(
+  fontFamily: poppinsFont,
+  fontSize: 20,
+  fontWeight: semiboldFont,
+);
+
+TextStyle poppinsFont12ptBlack = TextStyle(
+    fontFamily: poppinsFont,
+    fontSize: 12,
+    color: blackColor,
+    fontWeight: normalFont);
