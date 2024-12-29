@@ -2,175 +2,273 @@
   {
     "id": 1,
     "name": "Burgers",
-    "image": "assets/images/burger.png",
+    "image": "assets/icons/burger_icon.png",
     "foods": [
       {
         "id": 1,
         "name": "Cheese Burger",
         "image": "assets/images/cheeseburger.png",
-        "price": 10.0
+        "price": "100.00"
       },
       {
         "id": 2,
         "name": "Chicken Burger",
         "image": "assets/images/chickenburger.png",
-        "price": 12.0
+        "price": "12.00"
       },
       {
         "id": 3,
         "name": "Veggie Burger",
         "image": "assets/images/veggieburger.png",
-        "price": 8.0
+        "price": "8.00"
       }
     ]
   },
   {
     "id": 2,
     "name": "Pizza",
-    "image": "assets/images/pizza.png",
+    "image": "assets/icons/pizza_icon.png",
+    "additionalToppings": [
+      {
+        "name": "Pepperoni",
+        "price": "2.00"
+      },
+      {
+        "name": "Mushrooms",
+        "price": "2.00"
+      },
+      {
+        "name": "Olives",
+        "price": "2.00"
+      }
+    ],
     "foods": [
       {
         "id": 1,
         "name": "Cheese Pizza",
         "image": "assets/images/cheesepizza.png",
-        "price": 15.0
+        "description": "Classic cheese pizza",
+        "price": "15.00",
+        "sizes": [
+          {
+            "id": 1,
+            "size": "Small",
+            "extraCost": "00.00"
+          },
+          {
+            "id": 2,
+            "size": "Medium",
+            "extraCost": "2.00"
+          },
+          {
+            "id": 3,
+            "size": "Large",
+            "extraCost": "4.00"
+          }
+        ]
       },
       {
         "id": 2,
         "name": "Pepperoni Pizza",
         "image": "assets/images/pepperonipizza.png",
-        "price": 17.0
+        "description": "Classic pepperoni pizza",
+        "price": "17.00",
+        "sizes": [
+          {
+            "id": 1,
+            "size": "Small",
+            "extraCost": "00.00"
+          },
+          {
+            "id": 2,
+            "size": "Medium",
+            "extraCost": "2.00"
+          },
+          {
+            "id": 3,
+            "size": "Large",
+            "extraCost": "4.00"
+          }
+        ]
       },
       {
         "id": 3,
         "name": "Veggie Pizza",
         "image": "assets/images/veggiepizza.png",
-        "price": 13.0
+        "description": "Classic veggie pizza",
+        "price": "13.00",
+        "sizes": [
+          {
+            "id": 1,
+            "size": "Small",
+            "extraCost": "00.00"
+          },
+          {
+            "id": 2,
+            "size": "Medium",
+            "extraCost": "2.00"
+          },
+          {
+            "id": 3,
+            "size": "Large",
+            "extraCost": "4.00"
+          }
+        ]
       }
     ]
   },
   {
     "id": 3,
     "name": "Pasta",
-    "image": "assets/images/pasta.png",
+    "image": "assets/icons/pasta_icon.png",
+    "additionalToppings": [
+      {
+        "name": "Meatballs",
+        "price": "2.00"
+      },
+      {
+        "name": "Sausage",
+        "price": "2.00"
+      },
+      {
+        "name": "Chicken",
+        "price": "2.00"
+      }
+    ],
     "foods": [
       {
         "id": 1,
         "name": "Spaghetti",
         "image": "assets/images/spaghetti.png",
-        "price": 10.0
+        "description": "Classic spaghetti with marinara sauce",
+
+        "price": "10.00"
       },
       {
         "id": 2,
         "name": "Fettuccine",
         "image": "assets/images/fettuccine.png",
-        "price": 12.0
+        "price": "12.00"
       },
       {
         "id": 3,
         "name": "Ravioli",
         "image": "assets/images/ravioli.png",
-        "price": 8.0
+        "price": "8.00"
       }
     ]
   },
   {
     "id": 4,
     "name": "Salad",
-    "image": "assets/images/salad.png",
+    "image": "assets/icons/salad_icon.png",
+    "additionalToppings": [
+      {
+        "name": "Grilled Chicken",
+        "price": "2.00"
+      },
+      {
+        "name": "Shrimp",
+        "price": "2.00"
+      },
+      {
+        "name": "Salmon",
+        "price": "2.00"
+      }
+    ],
     "foods": [
       {
         "id": 1,
         "name": "Caesar Salad",
         "image": "assets/images/caesarsalad.png",
-        "price": 10.0
+        "price": "100.00"
       },
       {
         "id": 2,
         "name": "Greek Salad",
         "image": "assets/images/greeksalad.png",
-        "price": 12.0
+        "price": "12.00"
       },
       {
         "id": 3,
         "name": "Garden Salad",
         "image": "assets/images/gardensalad.png",
-        "price": 8.0
+        "price": "8.00"
       }
     ]
   },
   {
     "id": 5,
     "name": "Dessert",
-    "image": "assets/images/dessert.png",
+    "image": "assets/icons/dessert_icon.png",
     "foods": [
       {
         "id": 1,
         "name": "Cheesecake",
         "image": "assets/images/cheesecake.png",
-        "price": 10.0
+        "price": "100.00"
       },
       {
         "id": 2,
         "name": "Chocolate Cake",
         "image": "assets/images/chocolatecake.png",
-        "price": 12.0
+        "price": "12.00"
       },
       {
         "id": 3,
         "name": "Ice Cream",
         "image": "assets/images/icecream.png",
-        "price": 8.0
+        "price": "8.00"
       }
     ]
   },
   {
     "id": 6,
     "name": "Drinks",
-    "image": "assets/images/drink.png",
+    "image": "assets/icons/soda_icon.png",
     "foods": [
       {
         "id": 1,
         "name": "Coke",
         "image": "assets/images/coke.png",
-        "price": 2.0
+        "price": "2.00"
       },
       {
         "id": 2,
         "name": "Pepsi",
         "image": "assets/images/pepsi.png",
-        "price": 2.0
+        "price": "2.00"
       },
       {
         "id": 3,
         "name": "Sprite",
         "image": "assets/images/sprite.png",
-        "price": 2.0
+        "price": "2.00"
       }
     ]
   },
   {
     "id": 7,
     "name": "Sides",
-    "image": "assets/images/sides.png",
+    "image": "assets/icons/fries_icon.png",
     "foods": [
       {
         "id": 1,
         "name": "Fries",
         "image": "assets/images/fries.png",
-        "price": 5.0
+        "price": "5.00"
       },
       {
         "id": 2,
         "name": "Onion Rings",
         "image": "assets/images/onionrings.png",
-        "price": 6.0
+        "price": "6.00"
       },
       {
         "id": 3,
         "name": "Mozzarella Sticks",
         "image": "assets/images/mozzarellasticks.png",
-        "price": 7.0
+        "price": "7.00"
       }
     ]
   }
