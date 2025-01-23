@@ -24,6 +24,7 @@ class _ItemPageState extends State<ItemPage> {
     final Item item = widget.item;
     return Scaffold(
       appBar: KioskAppBar(),
+      bottomNavigationBar: PayNowButton(),
       body: SafeArea(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
