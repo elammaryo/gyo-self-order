@@ -38,8 +38,8 @@ class SideBar extends StatelessWidget {
                         padding: const EdgeInsets.all(15),
                       ),
                       onPressed: () {
-                        Navigator.pop(context);
-                        Navigator.pop(context);
+                        // Navigator.pop(context);
+                        // Navigator.pop(context);
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -55,8 +55,10 @@ class SideBar extends StatelessWidget {
                             width: 40,
                             child: Image.asset(categories[index].image ?? ''),
                           ),
-                          Text(categories[index].name ?? 'Category',
-                              style: poppinsFont16ptBlack),
+                          Text(
+                            categories[index].name ?? 'Category',
+                            style: poppinsFont16ptSemiboldBlack,
+                          ),
                         ],
                       ),
                     ),

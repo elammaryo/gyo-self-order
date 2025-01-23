@@ -14,7 +14,8 @@ class ItemSize {
   ItemSize.fromJson(final Map<String, dynamic> json) {
     id = json['id'];
     size = Sizes.values.firstWhere(
-        (final Sizes e) => e.toString() == json['size'],
+        (final Sizes e) =>
+            e.name.toLowerCase() == json['size'].toString().toLowerCase(),
         orElse: () => Sizes.standard);
     extraCost = json['extraCost'];
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gyo/api/backend_api.dart';
 import 'package:gyo/components/kiosk_app_bar.dart';
 import 'package:gyo/components/menu_category_card.dart';
+import 'package:gyo/components/pay_now_button.dart';
 import 'package:gyo/models/MenuCategory.dart';
 
 class MenuCategoriesPage extends StatefulWidget {
@@ -15,6 +16,7 @@ class _MenuCategoriesPageState extends State<MenuCategoriesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: PayNowButton(),
       backgroundColor: Colors.orange[300],
       appBar: KioskAppBar(),
       body: SafeArea(

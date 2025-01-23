@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gyo/components/kiosk_app_bar.dart';
-import 'package:gyo/pages/menu_categories.dart';
+import 'package:gyo/pages/menu_categories_page.dart';
 import 'package:gyo/shared/assets.dart';
 import 'package:gyo/shared/styles.dart';
 import 'package:gyo/shared/text.dart';

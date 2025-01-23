@@ -24,10 +24,16 @@ TextStyle poppinsFont48ptSemiboldBlack = TextStyle(
     color: blackColor,
     fontWeight: semiboldFont);
 
-TextStyle poppinsFont16ptBlack = TextStyle(
+TextStyle poppinsFont16ptSemiboldBlack = TextStyle(
     fontFamily: poppinsFont,
     fontSize: 16,
     color: blackColor,
+    fontWeight: semiboldFont);
+
+TextStyle poppinsFont20ptBoldWhite = TextStyle(
+    fontFamily: poppinsFont,
+    fontSize: 20,
+    color: whiteColor,
     fontWeight: semiboldFont);
 
 TextStyle poppinsFont20ptSemibold = TextStyle(
