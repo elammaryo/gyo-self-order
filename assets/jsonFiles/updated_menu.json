@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "name": "Burgers",
+    "image": "assets/icons/burger_icon.png",
+    "customizations": {
+      "toppings": []
+    },
+    "foods": [
+      {
+        "id": 1,
+        "name": "Cheese Burger",
+        "image": "assets/images/cheeseburger.png",
+        "price": 100.0
+      },
+      {
+        "id": 2,
+        "name": "Chicken Burger",
+        "image": "assets/images/chickenburger.png",
+        "price": 12.0
+      },
+      {
+        "id": 3,
+        "name": "Veggie Burger",
+        "image": "assets/images/veggieburger.png",
+        "price": 8.0
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pizza",
+    "image": "assets/icons/pizza_icon.png",
+    "customizations": {
+      "toppings": [
+        {
+          "name": "Pepperoni",
+          "price": 2.0
+        },
+        {
+          "name": "Mushrooms",
+          "price": 2.0
+        },
+        {
+          "name": "Olives",
+          "price": 2.0
+        }
+      ]
+    },
+    "foods": [
+      {
+        "id": 1,
+        "name": "Cheese Pizza",
+        "image": "assets/images/cheesepizza.png",
+        "description": "Classic cheese pizza",
+        "price": 15.0,
+        "sizes": [
+          {
+            "id": 1,
+            "size": "Small",
+            "extraCost": 0.0
+          },
+          {
+            "id": 2,
+            "size": "Medium",
+            "extraCost": 2.0
+          },
+          {
+            "id": 3,
+            "size": "Large",
+            "extraCost": 4.0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Pepperoni Pizza",
+        "image": "assets/images/pepperonipizza.png",
+        "description": "Classic pepperoni pizza",
+        "price": 17.0,
+        "sizes": [
+          {
+            "id": 1,
+            "size": "Small",
+            "extraCost": 0.0
+          },
+          {
+            "id": 2,
+            "size": "Medium",
+            "extraCost": 2.0
+          },
+          {
+            "id": 3,
+            "size": "Large",
+            "extraCost": 4.0
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Veggie Pizza",
+        "image": "assets/images/veggiepizza.png",
+        "description": "Classic veggie pizza",
+        "price": 13.0,
+        "sizes": [
+          {
+            "id": 1,
+            "size": "Small",
+            "extraCost": 0.0
+          },
+          {
+            "id": 2,
+            "size": "Medium",
+            "extraCost": 2.0
+          },
+          {
+            "id": 3,
+            "size": "Large",
+            "extraCost": 4.0
+          }
+        ]
+      }
+    ]
+  }
+]
