@@ -57,7 +57,7 @@ class SideBar extends StatelessWidget {
                           ),
                           Text(
                             categories[index].name ?? 'Category',
-                            style: poppinsFont16ptSemiboldBlack,
+                            style: poppinsFont16ptSemibold(),
                           ),
                         ],
                       ),

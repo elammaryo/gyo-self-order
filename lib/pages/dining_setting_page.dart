@@ -54,7 +54,7 @@ class _DiningSettingPageState extends State<DiningSettingPage> {
                         child: Image.asset(AppIcons.takeOutIcon)),
                     Text(
                       AppStrings.takeOut,
-                      style: poppinsFont48ptSemiboldBlack,
+                      style: poppinsFont48ptSemibold(),
                     ),
                   ],
                 )),
@@ -84,7 +84,7 @@ class _DiningSettingPageState extends State<DiningSettingPage> {
                     ),
                     Text(
                       AppStrings.dineIn,
-                      style: poppinsFont48ptSemiboldBlack,
+                      style: poppinsFont48ptSemibold(),
                     ),
                   ],
                 )),

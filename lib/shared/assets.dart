@@ -6,9 +6,11 @@ class BackgroundImages {
       'assets/images/fast_food_background.webp';
   static const String takeoutBackground =
       'assets/images/takeout_background.avif';
+  static const blurredBackground = 'assets/images/blurred_background.png';
 }
 
 class AppIcons {
+  static const String gyoLogo = 'assets/icons/gyo_vectorized.svg';
   static const String takeOutIcon = 'assets/icons/take_away_icon.png';
   static const String dineInIcon = 'assets/icons/fork_knife_icon.svg';
   static const String cartIcon = 'assets/icons/cart_icon.svg';

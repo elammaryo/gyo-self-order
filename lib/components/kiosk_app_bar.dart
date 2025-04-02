@@ -49,7 +49,7 @@ class _AppBarState extends State<KioskAppBar> {
           child: Row(
             spacing: 20,
             children: [
-              Text('View Cart', style: poppinsFont16ptSemiboldBlack),
+              Text('View Cart', style: poppinsFont16ptSemibold()),
               SizedBox(width: 40, child: SvgPicture.asset(AppIcons.cartIcon)),
             ],
           ),

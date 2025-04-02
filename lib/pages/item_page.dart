@@ -52,7 +52,7 @@ class _ItemPageState extends State<ItemPage> {
                       // item description
                       Text(
                         item.description ?? '',
-                        style: poppinsFont12ptBlack,
+                        style: poppinsFont12pt(),
                       ),
                       // item price
                       Text('\$${item.price ?? 'N/A'}'),
@@ -82,7 +82,7 @@ class _ItemPageState extends State<ItemPage> {
                                   child: Center(
                                       child: Text(
                                     size.size!.name.capitalize(),
-                                    style: poppinsFont12ptBlack,
+                                    style: poppinsFont12pt(),
                                   )),
                                 ),
                               )
