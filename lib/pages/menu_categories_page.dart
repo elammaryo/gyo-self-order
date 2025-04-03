@@ -19,79 +19,82 @@ class _MenuCategoriesPageState extends State<MenuCategoriesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: PayNowButton(),
-      backgroundColor: backgroundOrange,
       appBar: KioskAppBar(),
       body: SafeArea(
-        child: FutureBuilder(
-          future: BackendAPI.getMenuCategories(),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(child: const CircularProgressIndicator());
-            } else if (snapshot.hasError) {
-              return Text('Error: ${snapshot.error}');
-            } else {
-              final List<MenuCategory> categories = snapshot.data ?? [];
-              return GridView.builder(
-                  padding: const EdgeInsets.all(20),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 3,
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 40,
-                  ),
-                  itemCount: categories.length,
-                  itemBuilder: (context, index) {
-                    String icon = '';
-                    if (categories[index].name != null) {
-                      if (categories[index]
-                          .name!
-                          .toLowerCase()
-                          .contains('burger')) {
-                        icon = FoodIcons.burgerIcon;
-                      } else if (categories[index]
-                          .name!
-                          .toLowerCase()
-                          .contains('pizza')) {
-                        icon = FoodIcons.pizzaIcon;
-                      } else if (categories[index]
-                          .name!
-                          .toLowerCase()
-                          .contains('pasta')) {
-                        icon = FoodIcons.pastaIcon;
-                      } else if (categories[index]
-                          .name!
-                          .toLowerCase()
-                          .contains('dessert')) {
-                        icon = FoodIcons.dessertIcon;
-                      } else if (categories[index]
-                          .name!
-                          .toLowerCase()
-                          .contains('drink')) {
-                        icon = FoodIcons.sodaIcon;
-                      } else if (categories[index]
-                          .name!
-                          .toLowerCase()
-                          .contains('salad')) {
-                        icon = FoodIcons.saladIcon;
-                      } else if (categories[index]
-                          .name!
-                          .toLowerCase()
-                          .contains('soda')) {
-                        icon = FoodIcons.sodaIcon;
-                      } else if (categories[index]
-                          .name!
-                          .toLowerCase()
-                          .contains('side')) {
-                        icon = FoodIcons.sidesIcon;
+        child: Container(
+          decoration: BoxDecoration(gradient: orangeGradient),
+          child: FutureBuilder(
+            future: BackendAPI.getMenuCategories(),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Center(child: const CircularProgressIndicator());
+              } else if (snapshot.hasError) {
+                return Text('Error: ${snapshot.error}');
+              } else {
+                final List<MenuCategory> categories = snapshot.data ?? [];
+                return GridView.builder(
+                    padding: const EdgeInsets.all(20),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      childAspectRatio: 1.7,
+                      crossAxisSpacing: 0,
+                      mainAxisSpacing: 20,
+                    ),
+                    itemCount: categories.length,
+                    itemBuilder: (context, index) {
+                      String icon = '';
+                      if (categories[index].name != null) {
+                        if (categories[index]
+                            .name!
+                            .toLowerCase()
+                            .contains('burger')) {
+                          icon = FoodIcons.burgerIcon;
+                        } else if (categories[index]
+                            .name!
+                            .toLowerCase()
+                            .contains('pizza')) {
+                          icon = FoodIcons.pizzaIcon;
+                        } else if (categories[index]
+                            .name!
+                            .toLowerCase()
+                            .contains('pasta')) {
+                          icon = FoodIcons.pastaIcon;
+                        } else if (categories[index]
+                            .name!
+                            .toLowerCase()
+                            .contains('dessert')) {
+                          icon = FoodIcons.dessertIcon;
+                        } else if (categories[index]
+                            .name!
+                            .toLowerCase()
+                            .contains('drink')) {
+                          icon = FoodIcons.sodaIcon;
+                        } else if (categories[index]
+                            .name!
+                            .toLowerCase()
+                            .contains('salad')) {
+                          icon = FoodIcons.saladIcon;
+                        } else if (categories[index]
+                            .name!
+                            .toLowerCase()
+                            .contains('soda')) {
+                          icon = FoodIcons.sodaIcon;
+                        } else if (categories[index]
+                            .name!
+                            .toLowerCase()
+                            .contains('side')) {
+                          icon = FoodIcons.sidesIcon;
+                        }
                       }
-                    }
-                    return MenuCategoryCard(
-                      category: categories[index],
-                      icon: icon,
-                    );
-                  });
-            }
-          },
+                      return MenuCategoryCard(
+                        category: categories[index],
+                        icon: icon,
+                      );
+                    });
+              }
+            },
+          ),
         ),
       ),
     );

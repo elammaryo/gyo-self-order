@@ -14,23 +14,25 @@ class MenuItemsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundOrange,
       bottomNavigationBar: PayNowButton(),
       appBar: KioskAppBar(),
-      body: SafeArea(
-        child: GridView.builder(
-          padding: const EdgeInsets.all(20),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 3,
-            crossAxisSpacing: 20,
-            mainAxisSpacing: 40,
+      body: Container(
+        decoration: BoxDecoration(gradient: orangeGradient),
+        child: SafeArea(
+          child: GridView.builder(
+            padding: const EdgeInsets.all(20),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 2.5,
+              crossAxisSpacing: 0,
+              mainAxisSpacing: 20,
+            ),
+            itemBuilder: (context, index) => MenuItemCard(
+              item: itemList[index],
+              icon: icon,
+            ),
+            itemCount: itemList.length,
           ),
-          itemBuilder: (context, index) => MenuItemCard(
-            item: itemList[index],
-            icon: icon,
-          ),
-          itemCount: itemList.length,
         ),
       ),
     );

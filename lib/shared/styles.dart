@@ -9,6 +9,31 @@ const Color buttonBeige = Color.fromRGBO(255, 250, 241, 1);
 const Color shadowColor = Color.fromRGBO(0, 0, 0, 0.4);
 const Color footerColor = Color.fromRGBO(255, 255, 255, 0.7);
 const Color appBarColor = Color.fromRGBO(255, 229, 187, 1);
+const Color redColor = Color.fromRGBO(235, 64, 52, 1);
+
+// Greys
+const Color grey33 = Color.fromRGBO(33, 33, 33, 1);
+const Color grey60 = Color.fromRGBO(60, 60, 60, 1);
+
+// Color Gradients
+LinearGradient orangeGradient = LinearGradient(
+  begin: Alignment.topCenter,
+  end: Alignment.bottomCenter,
+  colors: [
+    Color.fromRGBO(255, 216, 155, 1), // light warm peachy-orange
+    Color.fromRGBO(255, 166, 66, 1), // rich, soft orange
+  ],
+);
+
+LinearGradient cafeBackgroundGradient = LinearGradient(
+  begin: Alignment.topCenter,
+  end: Alignment.bottomCenter,
+  colors: [
+    Color.fromRGBO(240, 215, 190, 1), // Soft peach beige
+    Color.fromRGBO(230, 190, 160, 1), // Deeper warm tan
+    Color.fromRGBO(215, 170, 135, 1), // Muted terracotta base
+  ],
+);
 
 const String poppinsFont = 'Poppins';
 

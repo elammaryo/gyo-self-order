@@ -21,73 +21,75 @@ class _DiningSettingPageState extends State<DiningSettingPage> {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(topRight: Radius.circular(20))),
       ),
-      backgroundColor: backgroundOrange,
       body: SafeArea(
-          child: Center(
-        child: Row(
-          spacing: 30,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  fixedSize: Size(400, 400),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  backgroundColor: buttonBeige,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MenuCategoriesPage(),
-                    ),
-                  );
-                },
-                child: Column(
-                  spacing: 10,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
+          child: Container(
+        decoration: BoxDecoration(gradient: orangeGradient),
+        child: Center(
+          child: Row(
+            spacing: 30,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(400, 400),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    backgroundColor: buttonBeige,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MenuCategoriesPage(),
+                      ),
+                    );
+                  },
+                  child: Column(
+                    spacing: 10,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                          height: 100,
+                          width: 100,
+                          child: Image.asset(AppIcons.takeOutIcon)),
+                      Text(
+                        AppStrings.takeOut,
+                        style: poppinsFont48ptSemibold(),
+                      ),
+                    ],
+                  )),
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(400, 400),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    backgroundColor: buttonBeige,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MenuCategoriesPage(),
+                      ),
+                    );
+                  },
+                  child: Column(
+                    spacing: 10,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
                         height: 100,
                         width: 100,
-                        child: Image.asset(AppIcons.takeOutIcon)),
-                    Text(
-                      AppStrings.takeOut,
-                      style: poppinsFont48ptSemibold(),
-                    ),
-                  ],
-                )),
-            ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  fixedSize: Size(400, 400),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  backgroundColor: buttonBeige,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MenuCategoriesPage(),
-                    ),
-                  );
-                },
-                child: Column(
-                  spacing: 10,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: 100,
-                      width: 100,
-                      child: SvgPicture.asset(AppIcons.dineInIcon),
-                    ),
-                    Text(
-                      AppStrings.dineIn,
-                      style: poppinsFont48ptSemibold(),
-                    ),
-                  ],
-                )),
-          ],
+                        child: SvgPicture.asset(AppIcons.dineInIcon),
+                      ),
+                      Text(
+                        AppStrings.dineIn,
+                        style: poppinsFont48ptSemibold(),
+                      ),
+                    ],
+                  )),
+            ],
+          ),
         ),
       )),
     );
