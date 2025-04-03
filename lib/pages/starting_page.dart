@@ -11,7 +11,7 @@ class StartingPage extends StatefulWidget {
   const StartingPage({super.key});
 
   @override
-  _StartingPageState createState() => _StartingPageState();
+  State<StartingPage> createState() => _StartingPageState();
 }
 
 class _StartingPageState extends State<StartingPage> {
@@ -56,7 +56,7 @@ class _StartingPageState extends State<StartingPage> {
                       SizedBox(height: 20),
                       Text(
                         'Tap to start your order',
-                        style: poppinsFont18ptSemibold(color: whiteColor),
+                        style: poppinsFont20ptSemibold(color: whiteColor),
                       ),
                     ],
                   ),

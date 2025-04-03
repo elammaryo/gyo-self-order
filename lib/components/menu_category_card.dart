@@ -6,9 +6,11 @@ import '../pages/menu_items_page.dart';
 
 class MenuCategoryCard extends StatelessWidget {
   final MenuCategory category;
+  final String icon;
   const MenuCategoryCard({
     super.key,
     required this.category,
+    required this.icon,
   });
 
   @override
@@ -21,14 +23,18 @@ class MenuCategoryCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => MenuItemsPage(itemList: category.items ?? []),
+            builder: (context) => MenuItemsPage(
+              itemList: category.items ?? [],
+              icon: icon,
+            ),
           ),
         );
       },
-      child: DecoratedBox(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 50),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: whiteColor,
+          color: buttonBeige,
           boxShadow: [
             BoxShadow(
               color: Color.fromRGBO(0, 0, 0, 0.1),
@@ -37,14 +43,30 @@ class MenuCategoryCard extends StatelessWidget {
             ),
           ],
         ),
-        child: Center(
-          child: Text(
-            category.name ?? 'Item',
-            style: TextStyle(
-              fontSize: 48,
-              fontWeight: FontWeight.bold,
+        child: Row(
+          spacing: 50,
+          children: [
+            SizedBox(
+              height: 70,
+              width: 70,
+              child: Image.asset(icon),
             ),
-          ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  category.name ?? 'Item',
+                  style: poppinsFont40ptSemibold(),
+                ),
+                if (category.description != null &&
+                    category.description!.isNotEmpty)
+                  Text(
+                    category.description ?? '',
+                    style: poppinsFont20ptSemibold(),
+                  ),
+              ],
+            ),
+          ],
         ),
       ),
     );

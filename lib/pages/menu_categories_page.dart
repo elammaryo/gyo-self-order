@@ -4,6 +4,8 @@ import 'package:gyo/components/kiosk_app_bar.dart';
 import 'package:gyo/components/menu_category_card.dart';
 import 'package:gyo/components/pay_now_button.dart';
 import 'package:gyo/models/MenuCategory.dart';
+import 'package:gyo/shared/assets.dart';
+import 'package:gyo/shared/styles.dart';
 
 class MenuCategoriesPage extends StatefulWidget {
   const MenuCategoriesPage({super.key});
@@ -17,7 +19,7 @@ class _MenuCategoriesPageState extends State<MenuCategoriesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: PayNowButton(),
-      backgroundColor: Colors.orange[300],
+      backgroundColor: backgroundOrange,
       appBar: KioskAppBar(),
       body: SafeArea(
         child: FutureBuilder(
@@ -39,8 +41,53 @@ class _MenuCategoriesPageState extends State<MenuCategoriesPage> {
                   ),
                   itemCount: categories.length,
                   itemBuilder: (context, index) {
+                    String icon = '';
+                    if (categories[index].name != null) {
+                      if (categories[index]
+                          .name!
+                          .toLowerCase()
+                          .contains('burger')) {
+                        icon = FoodIcons.burgerIcon;
+                      } else if (categories[index]
+                          .name!
+                          .toLowerCase()
+                          .contains('pizza')) {
+                        icon = FoodIcons.pizzaIcon;
+                      } else if (categories[index]
+                          .name!
+                          .toLowerCase()
+                          .contains('pasta')) {
+                        icon = FoodIcons.pastaIcon;
+                      } else if (categories[index]
+                          .name!
+                          .toLowerCase()
+                          .contains('dessert')) {
+                        icon = FoodIcons.dessertIcon;
+                      } else if (categories[index]
+                          .name!
+                          .toLowerCase()
+                          .contains('drink')) {
+                        icon = FoodIcons.sodaIcon;
+                      } else if (categories[index]
+                          .name!
+                          .toLowerCase()
+                          .contains('salad')) {
+                        icon = FoodIcons.saladIcon;
+                      } else if (categories[index]
+                          .name!
+                          .toLowerCase()
+                          .contains('soda')) {
+                        icon = FoodIcons.sodaIcon;
+                      } else if (categories[index]
+                          .name!
+                          .toLowerCase()
+                          .contains('side')) {
+                        icon = FoodIcons.sidesIcon;
+                      }
+                    }
                     return MenuCategoryCard(
                       category: categories[index],
+                      icon: icon,
                     );
                   });
             }

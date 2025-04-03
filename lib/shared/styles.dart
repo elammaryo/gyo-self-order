@@ -4,8 +4,11 @@ const Color whiteColor = Colors.white;
 const Color blackColor = Colors.black;
 const Color transparentColor = Colors.transparent;
 const Color yellowColor = Color.fromRGBO(255, 213, 39, 1);
+const Color backgroundOrange = Color.fromRGBO(255, 197, 95, 1);
+const Color buttonBeige = Color.fromRGBO(255, 250, 241, 1);
 const Color shadowColor = Color.fromRGBO(0, 0, 0, 0.4);
 const Color footerColor = Color.fromRGBO(255, 255, 255, 0.7);
+const Color appBarColor = Color.fromRGBO(255, 229, 187, 1);
 
 const String poppinsFont = 'Poppins';
 
@@ -27,11 +30,29 @@ TextStyle poppinsFont48ptSemibold({Color color = blackColor}) => TextStyle(
     color: color,
     fontWeight: semiboldFont);
 
-TextStyle poppinsFont18ptSemibold({Color color = blackColor}) => TextStyle(
+TextStyle poppinsFont40ptSemibold({Color color = blackColor}) => TextStyle(
     fontFamily: poppinsFont,
-    fontSize: 20,
+    fontSize: 40,
     color: color,
     fontWeight: semiboldFont);
+
+TextStyle poppinsFont30ptSemibold({Color color = blackColor}) => TextStyle(
+    fontFamily: poppinsFont,
+    fontSize: 30,
+    color: color,
+    fontWeight: semiboldFont);
+
+TextStyle poppinsFont18ptSemibold({Color color = blackColor}) => TextStyle(
+    fontFamily: poppinsFont,
+    fontSize: 18,
+    color: color,
+    fontWeight: semiboldFont);
+
+TextStyle poppinsFont16pt({Color color = blackColor}) => TextStyle(
+    fontFamily: poppinsFont,
+    fontSize: 16,
+    color: color,
+    fontWeight: normalFont);
 
 TextStyle poppinsFont16ptSemibold({Color color = blackColor}) => TextStyle(
     fontFamily: poppinsFont,
@@ -45,11 +66,12 @@ TextStyle poppinsFont20ptBoldWhite = TextStyle(
     color: whiteColor,
     fontWeight: semiboldFont);
 
-TextStyle poppinsFont20ptSemibold = TextStyle(
-  fontFamily: poppinsFont,
-  fontSize: 20,
-  fontWeight: semiboldFont,
-);
+TextStyle poppinsFont20ptSemibold({Color color = blackColor}) => TextStyle(
+      fontFamily: poppinsFont,
+      fontSize: 20,
+      color: color,
+      fontWeight: semiboldFont,
+    );
 
 TextStyle poppinsFont12pt({Color color = blackColor}) => TextStyle(
     fontFamily: poppinsFont,

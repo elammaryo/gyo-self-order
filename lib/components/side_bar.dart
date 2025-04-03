@@ -44,7 +44,9 @@ class SideBar extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => MenuItemsPage(
-                                    itemList: categories[index].items ?? [])));
+                                      itemList: categories[index].items ?? [],
+                                      icon: categories[index].image ?? '',
+                                    )));
                       },
                       child: Column(
                         spacing: 5,

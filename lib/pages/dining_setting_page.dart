@@ -23,7 +23,7 @@ class _DiningSettingPageState extends State<DiningSettingPage> {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(topRight: Radius.circular(20))),
       ),
-      backgroundColor: Colors.orange[300],
+      backgroundColor: backgroundOrange,
       body: SafeArea(
           child: Center(
         child: Row(
@@ -32,10 +32,11 @@ class _DiningSettingPageState extends State<DiningSettingPage> {
           children: [
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    fixedSize: Size(400, 400),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    backgroundColor: whiteColor),
+                  fixedSize: Size(400, 400),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  backgroundColor: buttonBeige,
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -63,7 +64,7 @@ class _DiningSettingPageState extends State<DiningSettingPage> {
                   fixedSize: Size(400, 400),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  backgroundColor: whiteColor,
+                  backgroundColor: buttonBeige,
                 ),
                 onPressed: () {
                   Navigator.push(

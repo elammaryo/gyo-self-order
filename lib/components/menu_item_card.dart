@@ -5,9 +5,11 @@ import 'package:gyo/shared/styles.dart';
 
 class MenuItemCard extends StatelessWidget {
   final Item item;
+  final String icon;
   const MenuItemCard({
     super.key,
     required this.item,
+    required this.icon,
   });
 
   @override
@@ -23,10 +25,11 @@ class MenuItemCard extends StatelessWidget {
           ),
         );
       },
-      child: DecoratedBox(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 50),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: whiteColor,
+          color: buttonBeige,
           boxShadow: [
             BoxShadow(
               color: Color.fromRGBO(0, 0, 0, 0.1),
@@ -35,14 +38,37 @@ class MenuItemCard extends StatelessWidget {
             ),
           ],
         ),
-        child: Center(
-          child: Text(
-            item.name ?? 'Item',
-            style: TextStyle(
-              fontSize: 48,
-              fontWeight: FontWeight.bold,
+        child: Row(
+          spacing: 50,
+          children: [
+            SizedBox(
+              height: 70,
+              width: 70,
+              child: Image.asset(icon),
             ),
-          ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              spacing: 5,
+              children: [
+                Text(
+                  item.name ?? 'Item',
+                  style: poppinsFont30ptSemibold(),
+                ),
+                if (item.price != null) ...[
+                  Text(
+                    '\$${item.price}',
+                    style: poppinsFont16ptSemibold(),
+                  ),
+                ],
+                if (item.description != null && item.description!.isNotEmpty)
+                  Text(
+                    item.description ?? '',
+                    style: poppinsFont16pt(),
+                  ),
+              ],
+            ),
+          ],
         ),
       ),
     );

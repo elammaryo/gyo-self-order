@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:gyo/components/kiosk_app_bar.dart';
 import 'package:gyo/components/menu_item_card.dart';
 import 'package:gyo/components/pay_now_button.dart';
+import 'package:gyo/shared/styles.dart';
 
 import '../models/Item.dart';
 
 class MenuItemsPage extends StatelessWidget {
   final List<Item> itemList;
-  const MenuItemsPage({super.key, required this.itemList});
+  final String icon;
+  const MenuItemsPage({super.key, required this.itemList, required this.icon});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange[300],
+      backgroundColor: backgroundOrange,
       bottomNavigationBar: PayNowButton(),
       appBar: KioskAppBar(),
       body: SafeArea(

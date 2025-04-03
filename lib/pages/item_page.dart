@@ -42,12 +42,12 @@ class _ItemPageState extends State<ItemPage> {
                       SizedBox(
                         width: 200,
                         height: 200,
-                        child: Image.asset(AppIcons.burgerIcon),
+                        child: Image.asset(FoodIcons.burgerIcon),
                       ),
                       // item name
                       Text(
                         item.name ?? 'Item',
-                        style: poppinsFont20ptSemibold,
+                        style: poppinsFont20ptSemibold(),
                       ),
                       // item description
                       Text(
@@ -105,7 +105,7 @@ class _ItemPageState extends State<ItemPage> {
                                     Text(item.toppings?[index].name ?? 'N/A'),
                                     Text(
                                       '\$${item.toppings?[index].price ?? 'N/A'}',
-                                      style: poppinsFont20ptSemibold,
+                                      style: poppinsFont20ptSemibold(),
                                     ),
                                     TextButton(
                                       onPressed: () {

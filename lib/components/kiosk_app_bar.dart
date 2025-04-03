@@ -11,14 +11,14 @@ class KioskAppBar extends StatefulWidget implements PreferredSizeWidget {
   const KioskAppBar({super.key});
 
   @override
-  _AppBarState createState() => _AppBarState();
+  State<KioskAppBar> createState() => _KioskAppBarState();
 }
 
-class _AppBarState extends State<KioskAppBar> {
+class _KioskAppBarState extends State<KioskAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.orange[100],
+      backgroundColor: appBarColor,
       toolbarHeight: 80,
       leadingWidth: 190,
       leading: TextButton(
@@ -27,7 +27,7 @@ class _AppBarState extends State<KioskAppBar> {
           spacing: 10,
           children: [
             Icon(Icons.restart_alt_rounded, size: 40),
-            Text('Start Over', style: poppinsFont20ptSemibold),
+            Text('Start Over', style: poppinsFont20ptSemibold()),
           ],
         ),
         onPressed: () {

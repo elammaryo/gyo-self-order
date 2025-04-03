@@ -14,5 +14,14 @@ class AppIcons {
   static const String takeOutIcon = 'assets/icons/take_away_icon.png';
   static const String dineInIcon = 'assets/icons/fork_knife_icon.svg';
   static const String cartIcon = 'assets/icons/cart_icon.svg';
+}
+
+class FoodIcons {
   static const String burgerIcon = 'assets/icons/burger_icon.png';
+  static const String pizzaIcon = 'assets/icons/pizza_icon.png';
+  static const String pastaIcon = 'assets/icons/pasta_icon.png';
+  static const String dessertIcon = 'assets/icons/dessert_icon.png';
+  static const String saladIcon = 'assets/icons/salad_icon.png';
+  static const String sodaIcon = 'assets/icons/soda_icon.png';
+  static const String sidesIcon = 'assets/icons/fries_icon.png';
 }
