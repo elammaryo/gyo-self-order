@@ -31,9 +31,9 @@ class MenuCategoryCard extends StatelessWidget {
         );
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 50),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(12),
           color: buttonBeige,
           boxShadow: [
             BoxShadow(
@@ -44,27 +44,39 @@ class MenuCategoryCard extends StatelessWidget {
           ],
         ),
         child: Row(
-          spacing: 50,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 30,
           children: [
-            SizedBox(
-              height: 70,
-              width: 70,
-              child: Image.asset(icon),
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  category.name ?? 'Item',
-                  style: poppinsFont40ptSemibold(),
+            Padding(
+              padding: const EdgeInsets.only(top: 6),
+              child: SizedBox(
+                height: 50,
+                width: 50,
+                child: FittedBox(
+                  fit: BoxFit.contain,
+                  child: Image.asset(icon),
                 ),
-                if (category.description != null &&
-                    category.description!.isNotEmpty)
+              ),
+            ),
+            Flexible(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    category.name ?? 'Item',
+                    style: poppinsFont40ptSemibold(),
+                  ),
+                  if (category.description != null &&
+                      category.description!.isNotEmpty)
+                    const SizedBox(height: 6),
                   Text(
                     category.description ?? '',
-                    style: poppinsFont20ptSemibold(),
+                    style: poppinsFont16pt(),
+                    softWrap: true,
                   ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

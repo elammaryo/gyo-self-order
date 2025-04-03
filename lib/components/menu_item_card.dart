@@ -26,9 +26,9 @@ class MenuItemCard extends StatelessWidget {
         );
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 50),
+        padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 40),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(10),
           color: buttonBeige,
           boxShadow: [
             BoxShadow(
@@ -39,34 +39,41 @@ class MenuItemCard extends StatelessWidget {
           ],
         ),
         child: Row(
-          spacing: 50,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 40,
           children: [
-            SizedBox(
-              height: 70,
-              width: 70,
-              child: Image.asset(icon),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: SizedBox(
+                height: 70,
+                width: 70,
+                child: Image.asset(icon),
+              ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              spacing: 5,
-              children: [
-                Text(
-                  item.name ?? 'Item',
-                  style: poppinsFont30ptSemibold(),
-                ),
-                if (item.price != null) ...[
+            Flexible(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                spacing: 5,
+                children: [
                   Text(
-                    '\$${item.price}',
-                    style: poppinsFont16ptSemibold(),
+                    item.name ?? 'Item',
+                    style: poppinsFont30ptSemibold(),
                   ),
+                  if (item.price != null) ...[
+                    Text(
+                      '\$${item.price}',
+                      style: poppinsFont16ptSemibold(),
+                    ),
+                  ],
+                  if (item.description != null && item.description!.isNotEmpty)
+                    Text(
+                      item.description ?? '',
+                      style: poppinsFont16pt(),
+                      softWrap: true,
+                    ),
                 ],
-                if (item.description != null && item.description!.isNotEmpty)
-                  Text(
-                    item.description ?? '',
-                    style: poppinsFont16pt(),
-                  ),
-              ],
+              ),
             ),
           ],
         ),

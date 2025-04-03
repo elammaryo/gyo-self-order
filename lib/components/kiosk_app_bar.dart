@@ -18,7 +18,7 @@ class _KioskAppBarState extends State<KioskAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: appBarColor,
+      backgroundColor: Color.fromRGBO(255, 243, 224, 1),
       toolbarHeight: 80,
       leadingWidth: 190,
       leading: TextButton(

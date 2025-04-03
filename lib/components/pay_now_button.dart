@@ -12,7 +12,7 @@ class PayNowButton extends StatelessWidget {
       child: TextButton(
         style: ElevatedButton.styleFrom(
           fixedSize: Size(110, 80),
-          backgroundColor: Colors.red,
+          backgroundColor: redColor,
           shape: RoundedRectangleBorder(),
         ),
         onPressed: () {
