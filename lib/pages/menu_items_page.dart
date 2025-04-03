@@ -26,7 +26,10 @@ class MenuItemsPage extends StatelessWidget {
             crossAxisSpacing: 20,
             mainAxisSpacing: 40,
           ),
-          itemBuilder: (context, index) => MenuItemCard(item: itemList[index]),
+          itemBuilder: (context, index) => MenuItemCard(
+            item: itemList[index],
+            icon: icon,
+          ),
           itemCount: itemList.length,
         ),
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:gyo/components/kiosk_app_bar.dart';
 import 'package:gyo/pages/menu_categories_page.dart';
 import 'package:gyo/shared/assets.dart';
 import 'package:gyo/shared/styles.dart';
@@ -10,14 +9,13 @@ class DiningSettingPage extends StatefulWidget {
   const DiningSettingPage({super.key});
 
   @override
-  _DiningSettingPageState createState() => _DiningSettingPageState();
+  State<DiningSettingPage> createState() => _DiningSettingPageState();
 }
 
 class _DiningSettingPageState extends State<DiningSettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: KioskAppBar(),
       endDrawer: Drawer(
         width: 600,
         shape: RoundedRectangleBorder(
