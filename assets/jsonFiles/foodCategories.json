@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Burgers",
+    "description": "Stacked, juicy and impossible to resist.",
     "image": "assets/icons/burger_icon.png",
     "foods": [
       {
@@ -27,6 +28,7 @@
   {
     "id": 2,
     "name": "Pizza",
+    "description": "Freshly baked with your favourite toppings.",
     "image": "assets/icons/pizza_icon.png",
     "additionalToppings": [
       {
@@ -120,6 +122,7 @@
   {
     "id": 3,
     "name": "Pasta",
+    "description": "Classic and creamy to bold and spicy.",
     "image": "assets/icons/pasta_icon.png",
     "additionalToppings": [
       {
@@ -161,6 +164,7 @@
   {
     "id": 4,
     "name": "Salad",
+    "description": "Fresh, crunchy, and kind of a big dill.",
     "image": "assets/icons/salad_icon.png",
     "additionalToppings": [
       {
@@ -200,6 +204,7 @@
   {
     "id": 5,
     "name": "Dessert",
+    "description": "Because you deserve a treat.",
     "image": "assets/icons/dessert_icon.png",
     "foods": [
       {
@@ -225,6 +230,7 @@
   {
     "id": 6,
     "name": "Drinks",
+    "description": "Refreshments to quench your thirst.",
     "image": "assets/icons/soda_icon.png",
     "foods": [
       {
@@ -251,6 +257,7 @@
     "id": 7,
     "name": "Sides",
     "image": "assets/icons/fries_icon.png",
+    "description": "Perfect pairings for your main dish.",
     "foods": [
       {
         "id": 1,
