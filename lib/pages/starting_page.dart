@@ -68,11 +68,11 @@ class _StartingPageState extends State<StartingPage> {
                       children: [
                         Text(
                           'Powered by',
-                          style: poppinsFont12pt(color: footerColor),
+                          style: poppinsFont16pt(color: footerColor),
                         ),
                         SizedBox(
-                          width: 35,
-                          height: 40,
+                          width: 45,
+                          height: 50,
                           child: FittedBox(
                             fit: BoxFit.fitHeight,
                             child: SvgPicture.asset(
