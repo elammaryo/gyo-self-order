@@ -38,8 +38,6 @@ class SideBar extends StatelessWidget {
                         padding: const EdgeInsets.all(15),
                       ),
                       onPressed: () {
-                        // Navigator.pop(context);
-                        // Navigator.pop(context);
                         Navigator.push(
                             context,
                             MaterialPageRoute(
