@@ -38,7 +38,7 @@ class _MenuCategoriesPageState extends State<MenuCategoriesPage> {
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3,
                       childAspectRatio: 1.7,
-                      crossAxisSpacing: 0,
+                      crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
                     ),
                     itemCount: categories.length,

@@ -24,7 +24,7 @@ class MenuItemsPage extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 2.5,
-              crossAxisSpacing: 0,
+              crossAxisSpacing: 20,
               mainAxisSpacing: 20,
             ),
             itemBuilder: (context, index) => MenuItemCard(

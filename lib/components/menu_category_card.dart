@@ -15,70 +15,73 @@ class MenuCategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      style: TextButton.styleFrom(
-        surfaceTintColor: transparentColor,
-      ),
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => MenuItemsPage(
-              itemList: category.items ?? [],
-              icon: icon,
-            ),
+    return Container(
+      decoration: BoxDecoration(
+        color: buttonBeige,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(0, 0, 0, 0.1),
+            blurRadius: 10,
+            offset: Offset(0, 10),
           ),
-        );
-      },
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          color: buttonBeige,
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 0.1),
-              blurRadius: 10,
-              offset: const Offset(0, 10),
-            ),
-          ],
-        ),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: 30,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 6),
-              child: SizedBox(
-                height: 50,
-                width: 50,
-                child: FittedBox(
-                  fit: BoxFit.contain,
-                  child: Image.asset(icon),
+        ],
+      ),
+      child: Material(
+        color: transparentColor,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(10),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => MenuItemsPage(
+                  itemList: category.items ?? [],
+                  icon: icon,
                 ),
               ),
-            ),
-            Flexible(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    category.name ?? 'Item',
-                    style: poppinsFont40ptSemibold(),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              spacing: 30,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 6),
+                  child: SizedBox(
+                    height: 50,
+                    width: 50,
+                    child: FittedBox(
+                      fit: BoxFit.contain,
+                      child: Image.asset(icon),
+                    ),
                   ),
-                  if (category.description != null &&
-                      category.description!.isNotEmpty)
-                    const SizedBox(height: 6),
-                  Text(
-                    category.description ?? '',
-                    style: poppinsFont16pt(),
-                    softWrap: true,
+                ),
+                Flexible(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        category.name ?? 'Item',
+                        style: poppinsFont40ptSemibold(),
+                      ),
+                      if (category.description != null &&
+                          category.description!.isNotEmpty)
+                        const SizedBox(height: 6),
+                      Text(
+                        category.description ?? '',
+                        style: poppinsFont16pt(),
+                        softWrap: true,
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
