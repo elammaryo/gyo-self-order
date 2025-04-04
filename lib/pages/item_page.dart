@@ -5,16 +5,20 @@ import 'package:gyo/components/side_bar.dart';
 import 'package:gyo/models/Item.dart';
 import 'package:gyo/models/ItemSize.dart';
 import 'package:gyo/models/enums/sizes.dart';
-import 'package:gyo/shared/assets.dart';
 import 'package:gyo/shared/helper.dart';
 import 'package:gyo/shared/styles.dart';
 
 class ItemPage extends StatefulWidget {
   final Item item;
-  const ItemPage({super.key, required this.item});
+  final String icon;
+  const ItemPage({
+    super.key,
+    required this.item,
+    required this.icon,
+  });
 
   @override
-  _ItemPageState createState() => _ItemPageState();
+  State<ItemPage> createState() => _ItemPageState();
 }
 
 class _ItemPageState extends State<ItemPage> {
@@ -44,7 +48,7 @@ class _ItemPageState extends State<ItemPage> {
                         SizedBox(
                           width: 200,
                           height: 200,
-                          child: Image.asset(FoodIcons.burgerIcon),
+                          child: Image.asset(widget.icon),
                         ),
                         // item name
                         Text(
