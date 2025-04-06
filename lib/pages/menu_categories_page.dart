@@ -4,14 +4,15 @@ import 'package:gyo/components/kiosk_app_bar.dart';
 import 'package:gyo/components/menu_category_card.dart';
 import 'package:gyo/components/pay_now_button.dart';
 import 'package:gyo/models/MenuCategory.dart';
+import 'package:gyo/models/providers/theme_provider.dart';
 import 'package:gyo/shared/assets.dart';
-import 'package:gyo/shared/styles.dart';
+import 'package:provider/provider.dart';
 
 class MenuCategoriesPage extends StatefulWidget {
   const MenuCategoriesPage({super.key});
 
   @override
-  _MenuCategoriesPageState createState() => _MenuCategoriesPageState();
+  State<MenuCategoriesPage> createState() => _MenuCategoriesPageState();
 }
 
 class _MenuCategoriesPageState extends State<MenuCategoriesPage> {
@@ -22,7 +23,9 @@ class _MenuCategoriesPageState extends State<MenuCategoriesPage> {
       appBar: KioskAppBar(),
       body: SafeArea(
         child: Container(
-          decoration: BoxDecoration(gradient: orangeGradient),
+          decoration: BoxDecoration(
+              gradient:
+                  context.read<ThemeProvider>().themePreset.backgroundGradient),
           child: FutureBuilder(
             future: BackendAPI.getMenuCategories(),
             builder: (context, snapshot) {

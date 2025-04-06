@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gyo/components/breathing_text.dart';
+import 'package:gyo/models/providers/theme_provider.dart';
 import 'package:gyo/pages/dining_setting_page.dart';
 import 'package:gyo/shared/assets.dart';
 import 'package:gyo/shared/styles.dart';
+import 'package:provider/provider.dart';
 
 import '../shared/text.dart';
 
@@ -24,7 +26,12 @@ class _StartingPageState extends State<StartingPage> {
             Positioned.fill(
               child: FittedBox(
                   fit: BoxFit.cover,
-                  child: Image.asset(BackgroundImages.blurredBackground)),
+                  child: Image.asset(
+                    context
+                        .read<ThemeProvider>()
+                        .themePreset
+                        .backgroundImagePath,
+                  )),
             ),
             TextButton(
               style: TextButton.styleFrom(shape: RoundedRectangleBorder()),

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:gyo/components/kiosk_app_bar.dart';
 import 'package:gyo/components/menu_item_card.dart';
 import 'package:gyo/components/pay_now_button.dart';
+import 'package:gyo/models/providers/theme_provider.dart';
 import 'package:gyo/shared/styles.dart';
+import 'package:provider/provider.dart';
 
 import '../models/Item.dart';
 
@@ -17,7 +19,9 @@ class MenuItemsPage extends StatelessWidget {
       bottomNavigationBar: PayNowButton(),
       appBar: KioskAppBar(),
       body: Container(
-        decoration: BoxDecoration(gradient: orangeGradient),
+        decoration: BoxDecoration(
+            gradient:
+                context.read<ThemeProvider>().themePreset.backgroundGradient),
         child: SafeArea(
           child: GridView.builder(
             padding: const EdgeInsets.all(20),

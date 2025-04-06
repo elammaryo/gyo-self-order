@@ -6,7 +6,7 @@ class BackgroundImages {
       'assets/images/fast_food_background.webp';
   static const String takeoutBackground =
       'assets/images/takeout_background.avif';
-  static const blurredBackground = 'assets/images/blurred_background.png';
+  static const burgerBackground = 'assets/images/blurred_background.png';
 }
 
 class AppIcons {

@@ -7,6 +7,9 @@ import 'package:gyo/models/ItemSize.dart';
 import 'package:gyo/models/enums/sizes.dart';
 import 'package:gyo/shared/helper.dart';
 import 'package:gyo/shared/styles.dart';
+import 'package:provider/provider.dart';
+
+import '../models/providers/theme_provider.dart';
 
 class ItemPage extends StatefulWidget {
   final Item item;
@@ -30,14 +33,16 @@ class _ItemPageState extends State<ItemPage> {
       appBar: KioskAppBar(),
       bottomNavigationBar: PayNowButton(),
       body: Container(
-        decoration: BoxDecoration(gradient: orangeGradient),
+        decoration: BoxDecoration(
+            gradient:
+                context.read<ThemeProvider>().themePreset.backgroundGradient),
         child: SafeArea(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SideBar(),
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.7,
+                width: MediaQuery.of(context).size.width * 0.8,
                 child: SingleChildScrollView(
                   child: Container(
                     padding: const EdgeInsets.all(30),

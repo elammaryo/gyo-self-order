@@ -5,6 +5,8 @@ import 'package:gyo/shared/assets.dart';
 import 'package:gyo/shared/styles.dart';
 import 'package:provider/provider.dart';
 
+import '../models/providers/theme_provider.dart';
+
 class KioskAppBar extends StatefulWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => Size.fromHeight(80);
@@ -18,7 +20,7 @@ class _KioskAppBarState extends State<KioskAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Color.fromRGBO(255, 243, 224, 1),
+      backgroundColor: context.read<ThemeProvider>().themePreset.secondaryColor,
       toolbarHeight: 80,
       leadingWidth: 190,
       leading: TextButton(
@@ -38,7 +40,8 @@ class _KioskAppBarState extends State<KioskAppBar> {
       actions: [
         TextButton(
           style: TextButton.styleFrom(
-            backgroundColor: Colors.orange[400],
+            backgroundColor:
+                context.read<ThemeProvider>().themePreset.primaryColor,
             fixedSize: Size.fromWidth(170),
             shape: RoundedRectangleBorder(),
             padding: const EdgeInsets.symmetric(horizontal: 15),

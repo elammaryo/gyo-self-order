@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gyo/models/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 import 'pages/starting_page.dart';
@@ -16,9 +17,10 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => OrderProvider()),
+        ChangeNotifierProvider(create: (context) => ThemeProvider()),
       ],
       child: MaterialApp(
-        title: 'GYO Pay',
+        title: 'GYO Orders',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.orangeAccent),
           useMaterial3: true,

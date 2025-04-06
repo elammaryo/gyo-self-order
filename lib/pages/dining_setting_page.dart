@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gyo/models/providers/theme_provider.dart';
 import 'package:gyo/pages/menu_categories_page.dart';
 import 'package:gyo/shared/assets.dart';
 import 'package:gyo/shared/styles.dart';
 import 'package:gyo/shared/text.dart';
+import 'package:provider/provider.dart';
 
 class DiningSettingPage extends StatefulWidget {
   const DiningSettingPage({super.key});
@@ -23,7 +25,9 @@ class _DiningSettingPageState extends State<DiningSettingPage> {
       ),
       body: SafeArea(
           child: Container(
-        decoration: BoxDecoration(gradient: orangeGradient),
+        decoration: BoxDecoration(
+            gradient:
+                context.read<ThemeProvider>().themePreset.backgroundGradient),
         child: Center(
           child: Row(
             spacing: 30,
