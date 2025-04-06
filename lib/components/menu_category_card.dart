@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gyo/models/MenuCategory.dart';
-import 'package:gyo/shared/styles.dart';
+import '../models/MenuCategory.dart';
+import '../shared/styles.dart';
 
 import '../pages/menu_items_page.dart';
 
@@ -43,7 +43,7 @@ class MenuCategoryCard extends StatelessWidget {
             );
           },
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+            padding: const EdgeInsets.fromLTRB(30, 30, 30, 0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               spacing: 30,

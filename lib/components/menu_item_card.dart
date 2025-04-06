@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gyo/models/Item.dart';
-import 'package:gyo/pages/item_page.dart';
-import 'package:gyo/shared/styles.dart';
+import '../models/Item.dart';
+import '../pages/item_page.dart';
+import '../shared/styles.dart';
 
 class MenuItemCard extends StatelessWidget {
   final Item item;
@@ -39,7 +39,7 @@ class MenuItemCard extends StatelessWidget {
             );
           },
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 40),
+            padding: const EdgeInsets.fromLTRB(45, 40, 45, 0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
