@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gyo/models/enums/dining_setting.dart';
+import 'package:gyo/models/providers/order_provider.dart';
 import 'package:gyo/models/providers/theme_provider.dart';
 import 'package:gyo/pages/menu_categories_page.dart';
 import 'package:gyo/shared/assets.dart';
@@ -41,6 +43,9 @@ class _DiningSettingPageState extends State<DiningSettingPage> {
                     backgroundColor: buttonBeige,
                   ),
                   onPressed: () {
+                    context
+                        .read<OrderProvider>()
+                        .setDiningSetting(DiningSetting.takeOut);
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -70,6 +75,9 @@ class _DiningSettingPageState extends State<DiningSettingPage> {
                     backgroundColor: buttonBeige,
                   ),
                   onPressed: () {
+                    context
+                        .read<OrderProvider>()
+                        .setDiningSetting(DiningSetting.takeOut);
                     Navigator.push(
                       context,
                       MaterialPageRoute(
