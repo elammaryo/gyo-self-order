@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gyo/models/CartItem.dart';
 import 'package:gyo/models/enums/dining_setting.dart';
-import '../Item.dart';
 
 class OrderProvider extends ChangeNotifier {
   final List<CartItem> _orderItems = [];
@@ -20,7 +19,7 @@ class OrderProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void removeOrderItem(final Item orderItem) {
+  void removeOrderItem(final CartItem orderItem) {
     _orderItems.remove(orderItem);
     notifyListeners();
   }
