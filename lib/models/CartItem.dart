@@ -1,11 +1,13 @@
+import 'package:gyo/models/AdditionalToppings.dart';
 import 'package:gyo/models/enums/sizes.dart';
 
 class CartItem {
   final String? id;
   final String? name;
-  final double? price;
+  final String? price;
   final Sizes? size;
   final int? quantity;
+  final List<Additionaltoppings>? toppings;
 
   CartItem({
     this.id,
@@ -13,14 +15,16 @@ class CartItem {
     this.price,
     this.size,
     this.quantity,
+    this.toppings,
   });
 
   CartItem copyWith({
     String? id,
     String? name,
-    double? price,
+    String? price,
     Sizes? size,
     int? quantity,
+    List<Additionaltoppings>? toppings,
   }) {
     return CartItem(
       id: id ?? this.id,
@@ -28,6 +32,7 @@ class CartItem {
       price: price ?? this.price,
       size: size ?? this.size,
       quantity: quantity ?? this.quantity,
+      toppings: toppings ?? this.toppings,
     );
   }
 
@@ -38,6 +43,7 @@ class CartItem {
       'price': price,
       'size': size,
       'quantity': quantity,
+      'toppings': toppings,
     };
   }
 
@@ -48,6 +54,7 @@ class CartItem {
       price: json['price'],
       size: json['size'],
       quantity: json['quantity'],
+      toppings: json['toppings'],
     );
   }
 

@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:gyo/components/kiosk_app_bar.dart';
 import 'package:gyo/components/pay_now_button.dart';
 import 'package:gyo/components/side_bar.dart';
+import 'package:gyo/models/CartItem.dart';
 import 'package:gyo/models/Item.dart';
 import 'package:gyo/models/ItemSize.dart';
 import 'package:gyo/models/enums/sizes.dart';
+import 'package:gyo/models/providers/order_provider.dart';
+import 'package:gyo/pages/menu_categories_page.dart';
 import 'package:gyo/shared/helper.dart';
 import 'package:gyo/shared/styles.dart';
 import 'package:provider/provider.dart';
@@ -26,6 +29,72 @@ class ItemPage extends StatefulWidget {
 
 class _ItemPageState extends State<ItemPage> {
   Sizes selectedSize = Sizes.small;
+  int quantity = 1;
+
+  Widget quatitySelector() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      spacing: 8,
+      children: [
+        TextButton(
+          style: TextButton.styleFrom(
+            fixedSize: Size(40, 40),
+            padding: EdgeInsets.zero,
+            backgroundColor: grey60,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+          ),
+          onPressed: () {
+            if (quantity > 0) {
+              setState(() {
+                quantity--;
+              });
+            }
+          },
+          child: Icon(
+            Icons.remove,
+            color: whiteColor,
+          ),
+        ),
+        Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            color: whiteColor,
+            border: Border.all(color: grey60),
+            borderRadius: BorderRadius.circular(5),
+          ),
+          child: Center(
+            child: Text(
+              quantity.toString(),
+              style: poppinsFont18ptSemibold(),
+            ),
+          ),
+        ),
+        TextButton(
+          style: TextButton.styleFrom(
+            fixedSize: Size(40, 40),
+            padding: EdgeInsets.zero,
+            backgroundColor: grey60,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+          ),
+          onPressed: () {
+            setState(() {
+              quantity++;
+            });
+          },
+          child: Icon(
+            Icons.add,
+            color: whiteColor,
+          ),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final Item item = widget.item;
@@ -40,7 +109,7 @@ class _ItemPageState extends State<ItemPage> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SideBar(),
+              const SideBar(),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: SingleChildScrollView(
@@ -58,8 +127,7 @@ class _ItemPageState extends State<ItemPage> {
                         // item name
                         Text(
                           item.name ?? 'Item',
-                          style: poppinsFont20ptSemibold(
-                              color: Color.fromRGBO(33, 33, 33, 1)),
+                          style: poppinsFont20ptSemibold(color: grey33),
                         ),
                         // item description
                         Text(
@@ -67,7 +135,10 @@ class _ItemPageState extends State<ItemPage> {
                           style: poppinsFont12pt(),
                         ),
                         // item price
-                        Text('\$${item.price ?? 'N/A'}'),
+                        Text(
+                          '\$${item.price ?? 'N/A'}',
+                          style: poppinsFont18ptSemibold(),
+                        ),
                         // sizes (if applicable)
                         Center(
                           child: Row(
@@ -78,7 +149,7 @@ class _ItemPageState extends State<ItemPage> {
                                 TextButton(
                                   style: TextButton.styleFrom(
                                     backgroundColor: selectedSize == size.size
-                                        ? Color.fromRGBO(60, 60, 60, 1)
+                                        ? grey60
                                         : whiteColor,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(5),
@@ -144,8 +215,40 @@ class _ItemPageState extends State<ItemPage> {
                               }),
                         ),
                         // quantity selector
+                        quatitySelector(),
+                        const SizedBox(height: 20),
                         // notes field?
                         // add to cart button
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            fixedSize: Size(200, 50),
+                            backgroundColor: redColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                          ),
+                          onPressed: () {
+                            context.read<OrderProvider>().addOrderItem(CartItem(
+                                  id: item.id.toString(),
+                                  name: item.name,
+                                  size: selectedSize,
+                                  price: item.price,
+                                  toppings: item.toppings,
+                                  quantity: quantity,
+                                ));
+                            Navigator.pop(context);
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        MenuCategoriesPage()));
+                          },
+                          child: Text(
+                            'Add to Cart',
+                            style: poppinsFont12pt(color: whiteColor),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   ),

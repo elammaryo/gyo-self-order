@@ -3,7 +3,6 @@ import 'package:gyo/components/kiosk_app_bar.dart';
 import 'package:gyo/components/menu_item_card.dart';
 import 'package:gyo/components/pay_now_button.dart';
 import 'package:gyo/models/providers/theme_provider.dart';
-import 'package:gyo/shared/styles.dart';
 import 'package:provider/provider.dart';
 
 import '../models/Item.dart';

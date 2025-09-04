@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:gyo/models/CartItem.dart';
 import 'package:gyo/models/enums/dining_setting.dart';
 import '../Item.dart';
 
 class OrderProvider extends ChangeNotifier {
-  final List<Item> _orderItems = [];
+  final List<CartItem> _orderItems = [];
   DiningSetting? _diningSetting;
 
-  List<Item> get orderItems => _orderItems;
+  List<CartItem> get orderItems => _orderItems;
   DiningSetting? get diningSetting => _diningSetting;
 
   void setDiningSetting(DiningSetting? setting) {
@@ -14,7 +15,7 @@ class OrderProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void addOrderItem(final Item orderItem) {
+  void addOrderItem(final CartItem orderItem) {
     _orderItems.add(orderItem);
     notifyListeners();
   }
